@@ -1,6 +1,6 @@
 ![logo](https://github.com/grialusal/repo-grupo-2/blob/master/assets/mirror.png)
 
-# Magic Mirror
+# Descripción
 
 Este proyecto solo acaba de empezar...
 
