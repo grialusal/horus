@@ -1,6 +1,8 @@
+![logo](https://github.com/grialusal/repo-grupo-2/assets/mirror.png)
+
 # Magic Mirror
 
-TO - DO
+Este es el repositorio de un proyecto de....
 
 ## Autores
 
