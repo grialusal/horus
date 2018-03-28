@@ -7,16 +7,16 @@ Este proyecto solo acaba de empezar...
 ## Autores
 
 Iñaki Tajes Reiris
+\
 Pablo Martín Corrales
+\
 Ignacio García Rogado
+\
 Pablo Rodríguez Aldeanueva
+\
 Guillermo Pérez Hernández
 
 ## Licencia
-
-The MIT License (MIT)
-=====================
-
 ???? Ponemos licencia al algo ?????
 
 Permission is hereby granted, free of charge, to any person
