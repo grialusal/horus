@@ -7,9 +7,13 @@ Este proyecto solo acaba de empezar...
 ## Autores
 
 Iñaki Tajes Reiris
+\
 Pablo Martín Corrales
+\
 Ignacio García Rogado
+\
 Pablo Rodríguez Aldeanueva
+\
 Guillermo Pérez Hernández
 
 ## Licencia
