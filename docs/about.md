@@ -7,21 +7,26 @@ sitemap:
     lastmod: 2017-11-02
     changefreq: weekly
 ---
-## About our Site
+## El proyecto
+<span class="image left"><img src="{{ "/images/mirror_bw.jpg" | absolute_url }}" alt="" /></span>
 
-<span class="image left"><img src="{{ "/images/pic04.jpg" | absolute_url }}" alt="" /></span>
+{{site.title}} es el resultado de un trabajo realizado por un grupo de estudiantes de la Universidad de Salamanca, en el que se
+han llevado al extremo de la imaginación el concepto de autoanálisis de nuestra salud y nuestro bienestar.
 
-Making steady content and conveying it well takes a great deal of research and, hence, time and exertion. Building a profound established comprehension of your target customer needs is critical as your principle objective ought to be to fulfill their requirements as awesome content. You should need to enhance their lives. Having significant content like this may not be simple by any methods. Be that as it may, in any case, it's a fundamental apparatus in the event that you expect to grow a fruitful and supportable business in the present web focused world.
 
-Receiving the benefits of content is a certain something. Be that as it may, it's so substantially less demanding once you begin conveying all the more successfully. The profitable content thought isn't just about bragging your item's capacities and general worth or your organization's achievements. You should concentrate less on advertising how awesome your item is and rather concentrate on indicating how valuable it is. This is a client focused approach as it concentrates on their issues and your answer for them. Making yourself fundamental is critical.
+El principal objetivo del proyecto es analizar y descubrir, desde el punto de vista de la experiencia de usuario y la forma de interacción
+entre persona y máquina, cual sería la mejor forma de interactuar con un dispositivo imaginado para así poder observar cómo esta tecnología
+podría cambiar nuestra forma de vida.
 
-### Content is Imortant
-<div class="box">
-  <p>
-  In saying that, a one-measure fits-all approach won't do the trick with regards to content promoting. Rather, an emphasis on making remarkable, high caliber and totally genuine content that is engaging, helpful and fascinating for customers will get you the crown. From content, video and symbolism to infographics, studies, online courses and podcasts, whatever your favored content medium is, guarantee it is shareable and pertinent to your industry.
-  </p>
-</div>
 
-<span class="image left"><img src="{{ "/images/pic05.jpg" | absolute_url }}" alt="" /></span>
+Concretamente, hemos diseñado un concepto de los que nosotros denominamos espejo de la salud. Este dispositivo, busca responder a la
+necesidad de analizar nuestra salud y bienestar con el fin de mejorarla, permitiendo tener una mayor conciencia sobre nuestros hábitos
+tanto buenos como malos, asícomo para la detección temprana y prevención de enfermedades. Paralelamente, tiene el objetivo de dar un valor
+añadido sobre el autoconocimiento de nuestro, permitiéndonos estar al tanto de nuestro rendimiento deportivo, la calidad de nuestro sueño,
+o el seguimiento de una dieta específica, sin tener que manejar distintas aplicaciones y/o dispositivos, simplemente mirarte al espejo
+y obtener información relevante.
 
-On social media, we may share our own thoughts and advance our image notwithstanding spreading musings for different associations and affiliations. With such a critical number of associations with people and relationship on social media, our experience can be over-burden with a considerable measure of information.
+<blockquote>
+Health is the greatest gift, contentment the greatest wealth, faithfulness the best relationship.
+<p><strong>Buddha</strong></p>
+</blockquote>
