@@ -17,7 +17,7 @@ Pablo Rodríguez Aldeanueva
 Guillermo Pérez Hernández
 
 ## Licencia
-???? Ponemos licencia al algo ?????
+???? Ponemos licencia o algo ?????
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
