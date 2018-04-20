@@ -1,4 +1,4 @@
-![logo](https://github.com/grialusal/repo-grupo-2/blob/master/assets/mirror.png)
+![logo](https://github.com/grialusal/horus/blob/master/assets/horus_logo_header.png)
 
 # Descripción
 
