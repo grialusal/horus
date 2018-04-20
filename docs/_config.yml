@@ -4,7 +4,7 @@ bio:                'Prueba de bio'
 description:        "Prueba de description"
 locale:             es_ES
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://grialusal.github.io/magicmirror/" # the base hostname & protocol for your site
+url: "https://grialusal.github.io/horus/" # the base hostname & protocol for your site
 
 defaults:
 - scope:
