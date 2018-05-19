@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="devlight">
+        <item>#ffa50a</item>
+        <item>#e08e00</item>
+        <item>#b87400</item>
+        <item>#8f5a00</item>
+    </string-array>
+
+    <string-array name="bg">
+        <item>#64ffa50a</item>
+        <item>#64e08e00</item>
+        <item>#64b87400</item>
+        <item>#648f5a00</item>
+    </string-array>
+
+    <string-array name="polluted_waves">
+        <item>#394948</item>
+        <item>#5a7874</item>
+        <item>#499092</item>
+        <item>#43abae</item>
+    </string-array>
+
+    <string-array name="medical_express">
+        <item>#a3a3a3</item>
+        <item>#bbbbbb</item>
+        <item>#cccccc</item>
+        <item>#dddddd</item>
+    </string-array>
+
+    <string-array name="medical_express_bg">
+        <item>#1e1e1e</item>
+        <item>#1e1e1e</item>
+        <item>#1e1e1e</item>
+        <item>#1e1e1e</item>
+    </string-array>
+
+    <string-array name="hippo_wine">
+        <item>#7D2041</item>
+        <item>#872c4d</item>
+        <item>#a14062</item>
+        <item>#ba5b7d</item>
+        <item>#ba6e89</item>
+        <item>#e2a5bb</item>
+    </string-array>
+
+    <string-array name="hippo_menu">
+        <item>#7D2041</item>
+        <item>#65cbff</item>
+        <item>#a14062</item>
+        <item>#A3C477</item>
+        <item>#CE4B01</item>
+    </string-array>
+
+    <string-array name="hippo_wine_bg">
+        <item>#e6e6e6</item>
+        <item>#ededed</item>
+        <item>#f5f5f5</item>
+        <item>#fafafa</item>
+    </string-array>
+
+</resources>
