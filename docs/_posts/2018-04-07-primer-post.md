@@ -17,10 +17,15 @@ y obtener información relevante.
 
 ## ¿Por qué lo vamos a hacer?
 
-Aquí hay que currarse el elevator pitch
+Hace ya tiempo dejamos atrás las grandes guerras mundiales, pestes, hambrunas... y es que, posiblemente, estamos viviendo el periodo de prosperidad más largo en la historia de la humanidad. Todo esto ha llevado a que nuestra atención y nuestra forma de ver las cosas haya cambiado de foco. Intentamos sacarles el máximo provecho a nuestras vidas, centrando nuestra atención en un recurso, “El tiempo”. Corremos de un lugar a otro intentando exprimirlo al máximo, obsesionados con sacar la mayor productividad en todo lo que hacemos. Como consecuencia, nos vemos obligados a decidir en que invertir nuestro tiempo, dejando de lado incluso cosas tan importantes como nuestra salud.
 
-a) Planteamiento del problema <br/>
-b) Descripción de la solución
+Aunque cada persona tiene una completísima argumentación sobre por qué no sigue hábitos de vida saludables, o por qué no lleva un control habitual de su salud; la realidad es que las escusas estrella son la falta de tiempo y la incomodidad o la pereza. A su vez, las personas que por necesidad tienen que monitorizar su salud, dependen de múltiples dispositivos de medida especializados e independientes, por lo que resulta una tarea tediosa.
+
+Desde el proyecto Horus, les presentamos una auténtica revolución en este ámbito. Reduciendo todos sus problemas a algo tan sencillo como mirarse al espejo. Un simple vistazo a nuestro dispositivo le permitirá evitar esas tediosas revisiones en el médico, recibir alertas sobre virus o infecciones, el seguimiento de sus dietas o incluso el diseño de planes de entrenamiento.
+
+Sin necesidad de invasivos métodos de análisis, sin pinchazos y sin esperas, tendrás acceso a la información más relevante acerca de tu bienestar, tu salud y tu estado emocional.
+
+Rápido, fácil y centralizado, para poder darle la importancia que se merece a tu salud. Dicho esto... ¿A qué esperas para dar el siguiente gran paso de tu vida?
 
 
 ## ¿Cómo lo pondremos en práctica?
