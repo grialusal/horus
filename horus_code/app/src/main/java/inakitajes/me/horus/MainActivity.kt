@@ -69,7 +69,16 @@ class MainActivity : AppCompatActivity(), InteractiveVoiceView.InteractiveVoiceL
 
         initLex()
         initPollyClient()
-        setupNewMediaPlayer()
+        //setupNewMediaPlayer()
+
+        fragmentFrame.setOnClickListener {
+            val transaction = supportFragmentManager.beginTransaction()
+            currentFragment = HistoryFragment()
+            transaction
+                    .replace(R.id.fragmentFrame, currentFragment)
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .commit()
+        }
 
         val recognitionProgressView = findViewById<View>(R.id.recognition_view) as RecognitionProgressView
         val colors1 = intArrayOf(ContextCompat.getColor(this, R.color.white),
