@@ -97,7 +97,7 @@
                 android:layout_weight="0"
                 android:alpha="0.7"
                 android:fontFamily="@font/lato_light"
-                android:text='"How did I sleep last night?"'
+                android:text='"Show my nutrition"'
                 android:textColor="@android:color/white"
                 android:textSize="25sp"
                 android:textStyle="italic" />
@@ -109,7 +109,7 @@
                 android:layout_marginTop="8dp"
                 android:alpha="0.6"
                 android:fontFamily="@font/lato_light"
-                android:text='"How much did I walk?"'
+                android:text='"Show my activity"'
                 android:textColor="@android:color/white"
                 android:textSize="25sp"
                 android:textStyle="italic" />

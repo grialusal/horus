@@ -164,7 +164,7 @@ class MainActivity : AppCompatActivity(), InteractiveVoiceView.InteractiveVoiceL
                 alertsButton.alpha = 1F
             }
 
-            "showNutrition" -> {
+            "nutrition" -> {
                 val transaction = supportFragmentManager.beginTransaction()
                 currentFragment = NutritionFragment()
                 transaction
@@ -188,7 +188,7 @@ class MainActivity : AppCompatActivity(), InteractiveVoiceView.InteractiveVoiceL
                 fitnessButton.alpha = 1F
             }
 
-            "showScan" -> {
+            "scanner" -> {
                 val transaction = supportFragmentManager.beginTransaction()
                 currentFragment = ScanFragment()
                 transaction
