@@ -74,10 +74,10 @@ class FitnessFragment : Fragment() {
         }
 
         val models = ArrayList<ArcProgressStackView.Model>()
-        models.add(ArcProgressStackView.Model("Running", 50F, bgColors[0], colors[0]))
-        models.add(ArcProgressStackView.Model("Swimming", 70F, bgColors[1], colors[1]))
-        models.add(ArcProgressStackView.Model("Walking", 80F, bgColors[2], colors[2]))
-        models.add(ArcProgressStackView.Model("Biking", 90F, bgColors[3], colors[3]))
+        models.add(ArcProgressStackView.Model("RUNNING", 50F, bgColors[0], colors[0]))
+        models.add(ArcProgressStackView.Model("SWIMMING", 70F, bgColors[1], colors[1]))
+        models.add(ArcProgressStackView.Model("WALKING", 80F, bgColors[2], colors[2]))
+        models.add(ArcProgressStackView.Model("BIKING", 90F, bgColors[3], colors[3]))
         mArcProgressStackView.models = models
     }
 
