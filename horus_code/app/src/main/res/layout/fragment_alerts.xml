@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/black"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black"
-    tools:context=".HistoryFragment">
+    tools:context=".AlertsFragment">
+
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -13,6 +13,7 @@
         android:padding="40dp">
 
         <LinearLayout
+            android:id="@+id/alertsLinearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -24,7 +25,7 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/lato_black"
-                android:text="History"
+                android:text="Alerts"
                 android:textColor="@android:color/white"
                 android:textSize="50sp" />
 
@@ -38,8 +39,8 @@
                     android:layout_width="50dp"
                     android:layout_height="60dp"
                     android:layout_weight="0"
-                    android:padding="4dp"
-                    android:src="@drawable/heart" />
+                    android:padding="10dp"
+                    android:src="@drawable/alerts" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -47,7 +48,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/lato_bold"
                     android:gravity="center_vertical"
-                    android:text="78 BPM"
+                    android:text="Don't forget to take your daily pill"
                     android:textColor="@android:color/white"
                     android:textSize="30sp" />
             </LinearLayout>
@@ -72,7 +73,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/lato_bold"
                     android:gravity="center_vertical"
-                    android:text="12033 kcal"
+                    android:text="You have reached today's kcal limit"
                     android:textColor="@android:color/white"
                     android:textSize="30sp" />
             </LinearLayout>
@@ -88,7 +89,7 @@
                     android:layout_height="60dp"
                     android:layout_weight="0"
                     android:padding="10dp"
-                    android:src="@drawable/height" />
+                    android:src="@drawable/alerts" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -96,7 +97,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/lato_bold"
                     android:gravity="center_vertical"
-                    android:text="169 cm"
+                    android:text="Cholesterol level has returned to normal"
                     android:textColor="@android:color/white"
                     android:textSize="30sp" />
             </LinearLayout>
@@ -113,7 +114,7 @@
                     android:layout_height="60dp"
                     android:layout_weight="0"
                     android:padding="10dp"
-                    android:src="@drawable/weight" />
+                    android:src="@drawable/fitness" />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -122,81 +123,12 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/lato_bold"
                     android:gravity="center_vertical"
-                    android:text="69 kg"
+                    android:text="You have reached 5000 steps, keep it up!"
                     android:textColor="@android:color/white"
                     android:textSize="30sp" />
             </LinearLayout>
 
-            <com.db.chart.view.LineChartView
-                android:id="@+id/linearChartView"
-                android:layout_width="400dp"
-                android:layout_height="250dp"
-                android:layout_marginTop="50dp"
-                android:layout_weight="1"
-                android:paddingEnd="15dp"
-                android:paddingStart="15dp"
-                android:paddingTop="15dp">
 
-            </com.db.chart.view.LineChartView>
-
-
-            <TextView
-                android:id="@+id/linearChartlabel"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/lato_bold"
-                android:text="This week activity"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:orientation="vertical">
-
-
-            <devlight.io.library.ArcProgressStackView
-                android:id="@+id/aspv"
-                android:layout_width="400dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="200dp"
-                app:apsv_animated="true"
-                app:apsv_animation_duration="1000"
-                app:apsv_dragged="true"
-                app:apsv_draw_width="75%"
-                app:apsv_indicator_orientation="vertical"
-                app:apsv_interpolator="@android:anim/bounce_interpolator"
-                app:apsv_leveled="true"
-                app:apsv_model_bg_enabled="true"
-                app:apsv_model_offset="0dp"
-                app:apsv_preview_bg="@android:color/background_dark"
-                app:apsv_preview_colors="@array/default_preview"
-                app:apsv_rounded="true"
-                app:apsv_shadow_angle="90"
-                app:apsv_shadow_color="#000"
-                app:apsv_shadow_distance="0dp"
-                app:apsv_shadow_radius="0dp"
-                app:apsv_shadowed="true"
-                app:apsv_start_angle="270"
-                app:apsv_sweep_angle="360"
-                app:apsv_text_color="#fff"
-                app:apsv_typeface="fonts/agency.ttf" />
-
-            <TextView
-                android:id="@+id/aspvLabel"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/lato_bold"
-                android:text="Monthly average"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
         </LinearLayout>
 
     </FrameLayout>

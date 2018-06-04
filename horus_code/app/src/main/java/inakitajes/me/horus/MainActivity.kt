@@ -51,13 +51,7 @@ class MainActivity : AppCompatActivity(), InteractiveVoiceView.InteractiveVoiceL
 
     var speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this)
     private val REQUEST_RECORDING_PERMISSIONS_RESULT = 75
-
-    private val TAG = "PollyDemo"
-
     private var credentialsProvider: CognitoCredentialsProvider? = null
-
-    private var client: AmazonPollyPresigningClient? = null
-    private var mediaPlayer: MediaPlayer? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,17 +62,7 @@ class MainActivity : AppCompatActivity(), InteractiveVoiceView.InteractiveVoiceL
         createTimeUpdater()
 
         initLex()
-        initPollyClient()
-        //setupNewMediaPlayer()
-
-        fragmentFrame.setOnClickListener {
-            val transaction = supportFragmentManager.beginTransaction()
-            currentFragment = HistoryFragment()
-            transaction
-                    .replace(R.id.fragmentFrame, currentFragment)
-                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .commit()
-        }
+        setOnclickListeners()
 
         val recognitionProgressView = findViewById<View>(R.id.recognition_view) as RecognitionProgressView
         val colors1 = intArrayOf(ContextCompat.getColor(this, R.color.white),
@@ -88,11 +72,6 @@ class MainActivity : AppCompatActivity(), InteractiveVoiceView.InteractiveVoiceL
                 ContextCompat.getColor(this, R.color.white))
         recognitionProgressView.setColors(colors1)
         recognitionProgressView.setSpeechRecognizer(speechRecognizer)
-        recognitionProgressView.setRecognitionListener(object : RecognitionListenerAdapter() {
-            override fun onResults(results: Bundle?) {
-                //showResults(results)
-            }
-        })
 
         recognitionProgressView.play()
 
@@ -105,16 +84,8 @@ class MainActivity : AppCompatActivity(), InteractiveVoiceView.InteractiveVoiceL
             }
         }
 
-        // talk("Hoola, man, como estas ?")
-        // startRecognition()
     }
 
-    private fun startRecognition() {
-        val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
-        intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, packageName)
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
-        speechRecognizer.startListening(intent)
-    }
 
     private fun createTimeUpdater() {
         object : CountDownTimer(Long.MAX_VALUE, 60000) {
@@ -164,7 +135,11 @@ class MainActivity : AppCompatActivity(), InteractiveVoiceView.InteractiveVoiceL
         speechTest.text = response.inputTranscript ?: ""
 
         response.intentName ?: return
+
+        var buttons = arrayOf(homeButton,alertsButton,nutritionButton,scanButton,fitnessButton,helpButton,historyButton)
+
         when(response.intentName) {
+
             "ShowHistory" -> {
                 val transaction = supportFragmentManager.beginTransaction()
                 currentFragment = HistoryFragment()
@@ -173,17 +148,174 @@ class MainActivity : AppCompatActivity(), InteractiveVoiceView.InteractiveVoiceL
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .commit()
 
+                for (button in buttons) { button.alpha = 0.5F }
+                historyButton.alpha = 1F
             }
+
+            "showAlerts" -> {
+                val transaction = supportFragmentManager.beginTransaction()
+                currentFragment = AlertsFragment()
+                transaction
+                        .replace(R.id.fragmentFrame, currentFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit()
+
+                for (button in buttons) { button.alpha = 0.5F }
+                alertsButton.alpha = 1F
+            }
+
+            "showNutrition" -> {
+                val transaction = supportFragmentManager.beginTransaction()
+                currentFragment = NutritionFragment()
+                transaction
+                        .replace(R.id.fragmentFrame, currentFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit()
+
+                for (button in buttons) { button.alpha = 0.5F }
+                nutritionButton.alpha = 1F
+            }
+
+            "showFitness" -> {
+                val transaction = supportFragmentManager.beginTransaction()
+                currentFragment = FitnessFragment()
+                transaction
+                        .replace(R.id.fragmentFrame, currentFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit()
+
+                for (button in buttons) { button.alpha = 0.5F }
+                fitnessButton.alpha = 1F
+            }
+
+            "showScan" -> {
+                val transaction = supportFragmentManager.beginTransaction()
+                currentFragment = ScanFragment()
+                transaction
+                        .replace(R.id.fragmentFrame, currentFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit()
+
+                for (button in buttons) { button.alpha = 0.5F }
+                scanButton.alpha = 1F
+            }
+
+            "showHelp" -> {
+                val transaction = supportFragmentManager.beginTransaction()
+                currentFragment = HelpFragment()
+                transaction
+                        .replace(R.id.fragmentFrame, currentFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .commit()
+
+                for (button in buttons) { button.alpha = 0.5F }
+                helpButton.alpha = 1F
+            }
+
             "goback" -> {
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction
                         .remove(currentFragment)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE)
                         .commit()
+
+                for (button in buttons) { button.alpha = 0.5F }
+                homeButton.alpha = 1F
             }
+
         }
 
         Log.d("MAIN_ACTIVITY", "Transcript: " + response.intentName)
+
+    }
+
+    private fun setOnclickListeners() {
+
+        var buttons = arrayOf(homeButton,alertsButton,nutritionButton,scanButton,fitnessButton,helpButton,historyButton)
+
+        homeButton.setOnClickListener {
+            val transaction = supportFragmentManager.beginTransaction()
+            transaction
+                    .remove(currentFragment)
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE)
+                    .commit()
+
+            for (button in buttons) { button.alpha = 0.5F }
+            homeButton.alpha = 1F
+
+        }
+
+        historyButton.setOnClickListener {
+            val transaction = supportFragmentManager.beginTransaction()
+            currentFragment = HistoryFragment()
+            transaction
+                    .replace(R.id.fragmentFrame, currentFragment)
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .commit()
+
+            for (button in buttons) { button.alpha = 0.5F }
+            historyButton.alpha = 1F
+        }
+
+        alertsButton.setOnClickListener {
+            val transaction = supportFragmentManager.beginTransaction()
+            currentFragment = AlertsFragment()
+            transaction
+                    .replace(R.id.fragmentFrame, currentFragment)
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .commit()
+
+            for (button in buttons) { button.alpha = 0.5F }
+            alertsButton.alpha = 1F
+        }
+
+        nutritionButton.setOnClickListener {
+            val transaction = supportFragmentManager.beginTransaction()
+            currentFragment = NutritionFragment()
+            transaction
+                    .replace(R.id.fragmentFrame, currentFragment)
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .commit()
+
+            for (button in buttons) { button.alpha = 0.5F }
+            nutritionButton.alpha = 1F
+        }
+
+        fitnessButton.setOnClickListener {
+            val transaction = supportFragmentManager.beginTransaction()
+            currentFragment = FitnessFragment()
+            transaction
+                    .replace(R.id.fragmentFrame, currentFragment)
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .commit()
+
+            for (button in buttons) { button.alpha = 0.5F }
+            fitnessButton.alpha = 1F
+        }
+
+        scanButton.setOnClickListener {
+            val transaction = supportFragmentManager.beginTransaction()
+            currentFragment = ScanFragment()
+            transaction
+                    .replace(R.id.fragmentFrame, currentFragment)
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .commit()
+
+            for (button in buttons) { button.alpha = 0.5F }
+            scanButton.alpha = 1F
+        }
+
+        helpButton.setOnClickListener {
+            val transaction = supportFragmentManager.beginTransaction()
+            currentFragment = HelpFragment()
+            transaction
+                    .replace(R.id.fragmentFrame, currentFragment)
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .commit()
+
+            for (button in buttons) { button.alpha = 0.5F }
+            helpButton.alpha = 1F
+        }
 
     }
 
@@ -202,61 +334,6 @@ class MainActivity : AppCompatActivity(), InteractiveVoiceView.InteractiveVoiceL
                 or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY)
     }
 
-
-
-    private fun initPollyClient() {
-        client = AmazonPollyPresigningClient(credentialsProvider)
-    }
-
-
-    private fun setupNewMediaPlayer() {
-        mediaPlayer = MediaPlayer()
-        mediaPlayer?.setOnCompletionListener { mp ->
-            mp.release()
-            setupNewMediaPlayer()
-        }
-        mediaPlayer?.setOnPreparedListener { mp ->
-            mp.start()
-        }
-        mediaPlayer?.setOnErrorListener { mp, what, extra ->
-            false
-        }
-    }
-
-
-    private fun talk(textToRead: String){
-
-        val selectedVoice = Voice().withId("Enrique")
-        // Create speech synthesis request.
-        val synthesizeSpeechPresignRequest = SynthesizeSpeechPresignRequest()
-                // Set text to synthesize.
-                .withText(textToRead)
-                // Set voice selected by the user.
-                .withVoiceId(selectedVoice.id)
-                // Set format to MP3.
-                .withOutputFormat(OutputFormat.Mp3)
-
-        // Get the presigned URL for synthesized speech audio stream.
-        val presignedSynthesizeSpeechUrl = client?.getPresignedSynthesizeSpeechUrl(synthesizeSpeechPresignRequest)
-
-        Log.i(TAG, "Playing speech from presigned URL: $presignedSynthesizeSpeechUrl")
-
-        // Create a media player to play the synthesized audio stream.
-        if (mediaPlayer?.isPlaying != true) {
-            setupNewMediaPlayer()
-        }
-        mediaPlayer?.setAudioStreamType(AudioManager.STREAM_MUSIC)
-
-        try {
-            // Set media player's data source to previously obtained URL.
-            mediaPlayer?.setDataSource(presignedSynthesizeSpeechUrl.toString())
-        } catch (e: IOException) {
-            Log.e(TAG, "Unable to set data source for the media player! " + e.message)
-        }
-
-        // Start the playback asynchronously (since the data source is a network stream).
-        mediaPlayer?.prepareAsync()
-    }
 
 
 }

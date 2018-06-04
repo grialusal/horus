@@ -1,7 +1,5 @@
 package inakitajes.me.horus
 
-
-import android.animation.TimeInterpolator
 import android.graphics.Color
 import android.graphics.Paint
 import android.os.Bundle
@@ -12,17 +10,16 @@ import android.view.ViewGroup
 import com.db.chart.animation.Animation
 import com.db.chart.model.LineSet
 import devlight.io.library.ArcProgressStackView
-import kotlinx.android.synthetic.main.fragment_history.*
+import kotlinx.android.synthetic.main.fragment_fitness.*
 import java.text.DecimalFormat
 import java.util.*
 
-class HistoryFragment : Fragment() {
-
+class FitnessFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_history, container, false)
+        return inflater.inflate(R.layout.fragment_fitness, container, false)
     }
 
 
@@ -77,10 +74,10 @@ class HistoryFragment : Fragment() {
         }
 
         val models = ArrayList<ArcProgressStackView.Model>()
-        models.add(ArcProgressStackView.Model("PASOS", 50F, bgColors[0], colors[0]))
-        models.add(ArcProgressStackView.Model("KCAL", 70F, bgColors[1], colors[1]))
-        models.add(ArcProgressStackView.Model("SUEÑO", 80F, bgColors[2], colors[2]))
-        models.add(ArcProgressStackView.Model("ESTRÉS", 90F, bgColors[3], colors[3]))
+        models.add(ArcProgressStackView.Model("Running", 50F, bgColors[0], colors[0]))
+        models.add(ArcProgressStackView.Model("Swimming", 70F, bgColors[1], colors[1]))
+        models.add(ArcProgressStackView.Model("Walking", 80F, bgColors[2], colors[2]))
+        models.add(ArcProgressStackView.Model("Biking", 90F, bgColors[3], colors[3]))
         mArcProgressStackView.models = models
     }
 
@@ -121,22 +118,6 @@ class HistoryFragment : Fragment() {
         anim.inSequence(0.6F)
         anim.setInterpolator(TimeInterpolators.easeOutCubic)
         linearChartView.show(anim)
-    }
-
-
-
-
-}
-
-object TimeInterpolators {
-
-    var easeOutElastic: TimeInterpolator = TimeInterpolator { t ->
-        val p = 0.3
-        (Math.pow(2.0,-10*t.toDouble()) * Math.sin((t-p/4)*(2*Math.PI)/p) + 1).toFloat()
-    }
-
-    val easeOutCubic: TimeInterpolator = TimeInterpolator { t ->
-        (1 - Math.pow(1.0-t.toDouble(),3.0)).toFloat()
     }
 
 }

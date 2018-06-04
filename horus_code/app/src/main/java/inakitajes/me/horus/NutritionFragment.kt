@@ -1,7 +1,5 @@
 package inakitajes.me.horus
 
-
-import android.animation.TimeInterpolator
 import android.graphics.Color
 import android.graphics.Paint
 import android.os.Bundle
@@ -12,17 +10,17 @@ import android.view.ViewGroup
 import com.db.chart.animation.Animation
 import com.db.chart.model.LineSet
 import devlight.io.library.ArcProgressStackView
-import kotlinx.android.synthetic.main.fragment_history.*
+import kotlinx.android.synthetic.main.fragment_nutrition.*
 import java.text.DecimalFormat
 import java.util.*
 
-class HistoryFragment : Fragment() {
 
 
+class NutritionFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_history, container, false)
+        return inflater.inflate(R.layout.fragment_nutrition, container, false)
     }
 
 
@@ -58,7 +56,7 @@ class HistoryFragment : Fragment() {
 
     fun setRoundChart() {
 
-        val MODEL_COUNT = 4
+        val MODEL_COUNT = 3
         val mArcProgressStackView = view?.findViewById(R.id.aspv) as ArcProgressStackView
         mArcProgressStackView.shadowRadius = 0F
         mArcProgressStackView.animationDuration = 1000
@@ -77,17 +75,16 @@ class HistoryFragment : Fragment() {
         }
 
         val models = ArrayList<ArcProgressStackView.Model>()
-        models.add(ArcProgressStackView.Model("PASOS", 50F, bgColors[0], colors[0]))
-        models.add(ArcProgressStackView.Model("KCAL", 70F, bgColors[1], colors[1]))
-        models.add(ArcProgressStackView.Model("SUEÑO", 80F, bgColors[2], colors[2]))
-        models.add(ArcProgressStackView.Model("ESTRÉS", 90F, bgColors[3], colors[3]))
+        models.add(ArcProgressStackView.Model("CARBS", 50F, bgColors[0], colors[0]))
+        models.add(ArcProgressStackView.Model("PROTEIN", 70F, bgColors[1], colors[1]))
+        models.add(ArcProgressStackView.Model("FAT", 80F, bgColors[2], colors[2]))
         mArcProgressStackView.models = models
     }
 
     fun setWeeklyChart() {
 
         var context = context ?: return
-        val values = arrayOf(34F, 67F,67F,56F,64F,80F,70F)
+        val values = arrayOf(346F, 167F,627F,356F,664F,680F,870F)
         val labels = arrayOf("MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN")
 
 
@@ -122,21 +119,4 @@ class HistoryFragment : Fragment() {
         anim.setInterpolator(TimeInterpolators.easeOutCubic)
         linearChartView.show(anim)
     }
-
-
-
-
-}
-
-object TimeInterpolators {
-
-    var easeOutElastic: TimeInterpolator = TimeInterpolator { t ->
-        val p = 0.3
-        (Math.pow(2.0,-10*t.toDouble()) * Math.sin((t-p/4)*(2*Math.PI)/p) + 1).toFloat()
-    }
-
-    val easeOutCubic: TimeInterpolator = TimeInterpolator { t ->
-        (1 - Math.pow(1.0-t.toDouble(),3.0)).toFloat()
-    }
-
 }

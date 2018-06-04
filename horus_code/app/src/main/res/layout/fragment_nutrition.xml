@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/black"
-    tools:context=".HistoryFragment">
+    tools:context=".NutritionFragment">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/lato_black"
-                android:text="History"
+                android:text="Nutrition"
                 android:textColor="@android:color/white"
                 android:textSize="50sp" />
 
@@ -38,16 +38,16 @@
                     android:layout_width="50dp"
                     android:layout_height="60dp"
                     android:layout_weight="0"
-                    android:padding="4dp"
-                    android:src="@drawable/heart" />
+                    android:padding="10dp"
+                    android:src="@drawable/food" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="@font/lato_bold"
+                    android:fontFamily="@font/lato_black"
                     android:gravity="center_vertical"
-                    android:text="78 BPM"
+                    android:text="Today's menu"
                     android:textColor="@android:color/white"
                     android:textSize="30sp" />
             </LinearLayout>
@@ -59,22 +59,16 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="60dp"
-                    android:layout_weight="0"
-                    android:padding="10dp"
-                    android:src="@drawable/fire" />
-
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/lato_bold"
                     android:gravity="center_vertical"
-                    android:text="12033 kcal"
+                    android:text="1st - Pumpkin cream"
                     android:textColor="@android:color/white"
-                    android:textSize="30sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -83,22 +77,16 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="60dp"
-                    android:layout_weight="0"
-                    android:padding="10dp"
-                    android:src="@drawable/height" />
-
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="0"
                     android:fontFamily="@font/lato_bold"
                     android:gravity="center_vertical"
-                    android:text="169 cm"
+                    android:text="2nd - Roast beef with potatoes"
                     android:textColor="@android:color/white"
-                    android:textSize="30sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -107,24 +95,17 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp"
-                    android:layout_weight="0"
-                    android:padding="10dp"
-                    android:src="@drawable/weight" />
-
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/lato_bold"
                     android:gravity="center_vertical"
-                    android:text="69 kg"
+                    android:text="3rd - Apple pie"
                     android:textColor="@android:color/white"
-                    android:textSize="30sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <com.db.chart.view.LineChartView
@@ -146,7 +127,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/lato_bold"
-                android:text="This week activity"
+                android:text="This week kcal burned"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp" />
@@ -193,13 +174,12 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/lato_bold"
-                android:text="Monthly average"
+                android:text="Macronutrients average"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp" />
         </LinearLayout>
 
     </FrameLayout>
-
 
 </FrameLayout>
